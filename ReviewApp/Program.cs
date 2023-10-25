@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 using Microsoft.EntityFrameworkCore;
 using PokemonReviewApp;
 using ReviewApp.Data;
 using ReviewApp.Interfaces;
 using ReviewApp.Repository;
 
+=======
+>>>>>>> 314928b89da248f26f567ca35a001016bb415ec8
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+<<<<<<< HEAD
 builder.Services.AddTransient<Seed>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -34,6 +38,14 @@ void SeedData(IHost app)
     }
 }
 
+=======
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+>>>>>>> 314928b89da248f26f567ca35a001016bb415ec8
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
